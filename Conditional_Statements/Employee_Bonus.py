@@ -5,7 +5,7 @@ bonus = 0
 if service_year > 5:
     if emp_salary < 20000:
         bonus = emp_salary * 0.2
-    elif 20000 < emp_salary < 50000:
+    elif emp_salary < 50000:
         bonus = emp_salary * 0.1
     else:
         bonus = emp_salary * 0.05
