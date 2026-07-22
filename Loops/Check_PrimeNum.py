@@ -1,16 +1,17 @@
 #Check whether a number is prime.
-given_num = int(input("Give number to check prime: "))
-fact_check = False
+def prime(num):
+    if num == 1:
+        return False
+    
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True    
+              
+number = int(input("Give number to check prime: "))
+result = prime(number)
 
-if given_num == 1:
-    fact_check = True
-
-for number in range(2, given_num):
-    if given_num % number == 0:
-        fact_check = True
-        break
-        
-if not fact_check:
-    print("Prime number")
+if result:
+    print("Prime")
 else:
-    print("Not Prime number")
+    print("Not Prime")
