@@ -1,14 +1,12 @@
 #Check whether a number is a palindrome.
-given_number = int(input("Enter number: "))
-n = given_number
+def palindrome(num):
+    temp = num
+    res = 0
+    while num > 0:
+        rem = num % 10
+        res = res * 10 + rem
+        num //= 10
+    return "Palindrome" if temp == res else "Not Palindrome"
 
-reverse_digit = 0
-while(n > 0):
-    digit = n % 10
-    reverse_digit = (reverse_digit * 10) + digit
-    n //= 10
-
-if reverse_digit == given_number:
-    print("Palindrome number")
-else:
-    print("Not Palindrome number")
+number = int(input("Enter number: "))
+print(palindrome(number))
